@@ -8,19 +8,19 @@ public class Main{
     public static void main(String[] args){
         ZonedDateTime gmt = ZonedDateTime.now(ZoneId.of("GMT"));
         LocalDateTime local = LocalDateTime.now();
-        DateTimeFormatter gmt1 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        DateTimeFormatter gmt2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        DateTimeFormatter gmt3 = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy");
-        DateTimeFormatter gmt4 = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy hh:mm");
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy");
+        DateTimeFormatter fmt4 = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy hh:mm");
         System.out.println("GMT Date and Time");
-        System.out.println(gmt.format(gmt1));
-        System.out.println(gmt.format(gmt2));
-        System.out.println(gmt.format(gmt3));
-        System.out.println(gmt.format(gmt4));
+        System.out.println(gmt.format(fmt1));
+        System.out.println(gmt.format(fmt2));
+        System.out.println(gmt.format(fmt3));
+        System.out.println(gmt.format(fmt4));
         System.out.println("Local Date and Time");
-        System.out.println(local.format(gmt1));
-        System.out.println(local.format(gmt2));
-        System.out.println(local.format(gmt3));
-        System.out.println(local.format(gmt4));
+        System.out.println(local.format(fmt1));
+        System.out.println(local.format(fmt2));
+        System.out.println(local.format(fmt3));
+        System.out.println(local.format(fmt4));
     }
 }
